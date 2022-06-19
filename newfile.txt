@@ -1,1 +1,69 @@
-new file was created
+create database menu;
+
+use menu;
+
+create table dish (
+id int not null AUTO_INCREMENT PRIMARY KEY,
+name varchar(30) not null,
+price int not null,
+weight int not null,
+calories int not null
+);
+
+insert into dish (name, price, weight, calories) values ('baked potatoes', 30, 200, 300);
+
+insert into dish (name, price, weight, calories) values ('baked beans', 25, 260, 244);
+
+insert into dish (name, price, weight, calories) values ('burrito', 95, 200, 326);
+
+insert into dish (name, price, weight, calories) values ('chiken marsala', 230, 2301, 2209);
+
+insert into dish (name, price, weight, calories) values ('lasagne', 105, 215, 284);
+
+insert into dish (name, price, weight, calories) values ('meat pie', 125, 120, 290);
+
+insert into dish (name, price, weight, calories) values ('shrimp cocktail', 85, 28, 130);
+
+insert into dish (name, price, weight, calories) values ('kebab', 130, 360, 774);
+
+insert into dish (name, price, weight, calories) values ('taco', 90, 98, 213);
+
+insert into dish (name, price, weight, calories) values ('omelette', 85, 180, 190);
+
+
+select * from dish;
+drop table dish;
+
+create table dish (
+id int not null AUTO_INCREMENT PRIMARY KEY,
+product_name varchar(30) not null,
+price int not null,
+weight int not null,
+calories int not null
+);
+
+insert into dish (product_name, price, weight, calories) values ('baked potatoes', 30, 200, 300);
+
+insert into dish (product_name, price, weight, calories) values ('baked beans', 25, 260, 244);
+
+insert into dish (product_name, price, weight, calories) values ('burrito', 95, 200, 326);
+
+insert into dish (product_name, price, weight, calories) values ('chiken marsala', 230, 2301, 2209);
+
+insert into dish (product_name, price, weight, calories) values ('lasagne', 105, 215, 284);
+
+insert into dish (product_name, price, weight, calories) values ('meat pie', 125, 120, 290);
+
+insert into dish (product_name, price, weight, calories) values ('shrimp cocktail', 85, 28, 130);
+
+insert into dish (product_name, price, weight, calories) values ('kebab', 130, 360, 774);
+
+insert into dish (product_name, price, weight, calories) values ('taco', 90, 98, 213);
+
+insert into dish (product_name, price, weight, calories) values ('omelette', 85, 180, 190);
+
+select * from dish;
+
+select id, product_name, price, calories from dish where price > 100; 
+
+select avg(calories) from dish where price > 100;
